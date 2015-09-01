@@ -1,0 +1,45 @@
+{
+  "name": "gajdaw-ruby",
+  "version": "0.5.3",
+  "author": "Włodzimierz Gajda",
+  "summary": "The module installs ruby compiling it from sources",
+  "license": "MIT",
+  "source": "https://github.com/puppet-by-examples/puppet-ruby",
+  "project_page": "https://github.com/puppet-by-examples/puppet-ruby",
+  "issues_url": "https://github.com/puppet-by-examples/puppet-ruby/issues",
+  "tags": [
+    "ruby",
+    "update",
+    "install",
+    "compile",
+    "source",
+    "make",
+    "build"
+  ],
+  "operatingsystem_support": [
+    {
+      "operatingsystem": "CentOS",
+      "operatingsystemrelease": [
+        "6.5",
+        "7.0"
+      ]
+    },
+    {
+      "operatingsystem": "Debian",
+      "operatingsystemrelease": [
+        "6.0"
+      ]
+    },
+    {
+      "operatingsystem": "Ubuntu",
+      "operatingsystemrelease": [
+        "12.04",
+        "14.04"
+      ]
+    }
+  ],
+  "dependencies": [
+    {"name":"gajdaw/diverse_functions","version_requirement":">=0.1.1"},
+    {"name":"puppetlabs/stdlib","version_requirement":">=4.5.0"}
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "LICENSE": "650e4f43e74843f06157da876226d348",
+  "README.md": "4b0c879e0875652ba7c8c8e886db29df",
+  "examples/default-without-clean.pp": "1026da75e1315b4c8bbae9008992424f",
+  "examples/default.pp": "9e46e49bc96b3be06d24b362f31afdcd",
+  "examples/prereqs.pp": "68c8b84dac412e7848260673bccbbb3c",
+  "examples/ruby-1.9.3.pp": "cdab0c79e214522f13c8d6ac0c839c70",
+  "examples/ruby-2.1.0.pp": "fe495443dd76fb516e851bcb116d1657",
+  "examples/with-update.pp": "03cea7a10aae363f4035ea17c45a168c",
+  "manifests/init.pp": "ebebbdb50f78f17d08011f99f920b46f",
+  "manifests/prereqs.pp": "2d9b38d01ad9a58d121efcd02b2be5b0",
+  "metadata.json": "58a3c0280e43272f9ac587fba3ce6b67",
+  "spec/spec_helper.rb": "a55d1e6483344f8ec6963fcb2c220372",
+  "stamp.yml": "eb3dea661d3d6611702953fe6cc5fba3",
+  "test-output.txt": "5ce54049aa806aa1a5e5b7c95279f7ea",
+  "tests/init.pp": "e431f813fbbdb19b62f6142be5db7239"
+}

@@ -17,13 +17,13 @@ Vagrant.configure(2) do |config|
   # Machine hostname
   config.vm.hostname = "vagrant-trusty64"
 
-  # Fix for "is not a TTY" bug
-  config.ssh.pty = true
+  # Forward port 8080
+  config.vm.network "forwarded_port", guest: 80, host: 8080, auto_correct: true
 
   # Configure VirtualBox
   config.vm.provider "virtualbox" do |vb|
-  #   # Display the VirtualBox GUI when booting the machine
-  #   vb.gui = true
+      # Display the VirtualBox GUI when booting the machine
+      # vb.gui = true
 
       # Customize the amount of memory on the VM:
       vb.memory = "1024"
@@ -32,7 +32,7 @@ Vagrant.configure(2) do |config|
       vb.customize ["modifyvm", :id, "--natdnshostresolver1", "on"]
   end
 
-  # Configure one-off Puppet upgrade shell provisioner
+  # One-off Puppet Upgrade
   config.vm.provision :shell, run: "once",
     inline: "echo Upgrading Puppet... && apt-get update &>/dev/null && apt-get install -y puppet &>/dev/null"
 

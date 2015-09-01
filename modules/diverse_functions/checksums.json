@@ -1,0 +1,10 @@
+{
+  "README.md": "705b35acafd1c003821198a9d0bbb7de",
+  "examples/default.pp": "d07c58abf7e389c24687ea14112f6d41",
+  "examples/inside-a-class.pp": "0120eb91031ecc6965493916120c5f61",
+  "lib/puppet/parser/functions/validate_platform.rb": "69a7cd2546dd92bb04466441a005e89c",
+  "metadata.json": "fbacb936d18fdfb7070c95a73c8048e3",
+  "spec/spec_helper.rb": "a55d1e6483344f8ec6963fcb2c220372",
+  "stamp.yml": "eb3dea661d3d6611702953fe6cc5fba3",
+  "tests/init.pp": "8b0cb52eac6d56213fbf5347e1ec0fb7"
+}
