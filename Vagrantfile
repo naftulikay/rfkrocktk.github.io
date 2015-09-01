@@ -32,6 +32,10 @@ Vagrant.configure(2) do |config|
       vb.customize ["modifyvm", :id, "--natdnshostresolver1", "on"]
   end
 
+  # Configure one-off Puppet upgrade shell provisioner
+  config.vm.provision :shell, run: "once",
+    inline: "echo Upgrading Puppet... && apt-get update &>/dev/null && apt-get install -y puppet &>/dev/null"
+
   # Configure Puppet Provisioning
   config.vm.provision :puppet do |puppet|
     puppet.hiera_config_path = "conf/hiera/hiera.yml"
