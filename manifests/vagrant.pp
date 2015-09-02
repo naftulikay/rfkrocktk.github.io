@@ -15,6 +15,11 @@ node 'vagrant-trusty64' {
         version => '2.2.0',
     }
 
+    package { 'pygments':
+        ensure => present,
+        provider => 'pip',
+    }
+
     package { 'bundler':
         ensure   => present,
         provider => 'gem',
@@ -32,24 +37,33 @@ node 'vagrant-trusty64' {
     }
 
     Class['::ruby'] -> Package <| provider == 'gem' |>
+    Exec['install_pip'] -> Package <| provider == 'pip' |>
 
     class { '::nginx': }
 
-    nginx::resource::upstream { 'jekyll':
-        members => ['localhost:4000']
-    }
-
     nginx::resource::vhost { 'default':
         server_name => ['_'],
-        proxy       => 'http://jekyll',
+        www_root    => '/vagrant/_site',
+        try_files   => ['$uri', '$uri/index.html', '$uri/', '=404'],
+        vhost_cfg_prepend => {
+            'server_name_in_redirect' => 'off',
+            'port_in_redirect'        => 'on',
+        },
+        rewrite_rules => [
+            # redirect everything ending in at least one slash to remove the slash,
+            # respecting the scheme and the host header's value.
+            '^/(.+)/+$ $scheme://$http_host/$1 permanent'
+        ]
     }
 
     class { '::supervisord':
         install_pip => true,
     }
 
+    class { '::jekyll': }
+
     supervisord::program { 'jekyll':
-        command         => 'bundler exec jekyll serve',
+        command         => '/usr/local/bin/jekyll-auto-builder',
         user            => 'vagrant',
         directory       => '/vagrant',
         autostart       => true,
@@ -58,6 +72,7 @@ node 'vagrant-trusty64' {
         require         => [
             Package['nodejs'],
             Exec['bundler_install'],
+            Class['jekyll'],
         ]
     }
 }
