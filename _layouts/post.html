@@ -8,9 +8,17 @@ layout: default
   <div class="entry">
     {{ content }}
   </div>
-
-  <div class="date">
-    Written on {{ page.date | date: "%B %e, %Y" }}
+  
+  <div class="post-footer">
+      {% if page.source %}
+      <div class="source">
+          <a href="{{ page.source }}" window="_blank">Source</a>
+      </div>
+      {% endif %}
+      
+      <div class="date">
+        Written on {{ page.date | date: "%B %e, %Y" }}
+      </div>
   </div>
 
   {% include disqus.html %}
