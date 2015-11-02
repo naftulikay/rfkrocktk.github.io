@@ -197,7 +197,6 @@ When you run Linux, you don't settle for less, and where there's a will, there's
 forth and use your previously unusable hardware. Run Chrome. Run VMs. Install things. Profit.
 
 ![Profit][profit]
-
  [wonka-meme]: /images/2015-11-02-linux-ram-disk-hacking/wonka-ram-and-disk-meme.jpg
  [what-year-is-it-meme]: /images/2015-11-02-linux-ram-disk-hacking/what-year-is-it.gif
  [vagrant]: https://vagrantup.com
