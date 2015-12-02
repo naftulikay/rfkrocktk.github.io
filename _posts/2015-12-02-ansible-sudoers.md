@@ -55,4 +55,4 @@ you won't be locked out. Ansible saves the day again!
  [img-automate-att]: /images/2015-12-02-ansible-sudoers/automate-all-the-things.jpg
  [ansible-template]: https://docs.ansible.com/ansible/template_module.html
  [jinja]: http://jinja.pocoo.org/
- [post-rsync-as-root]: /posts/2015-11-19-rsync-as-root/
+ [post-rsync-as-root]: /2015/11/rsync-as-root/
