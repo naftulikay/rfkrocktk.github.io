@@ -15,7 +15,7 @@ I periodically do consulting and contracting for organizations for a variety of 
  * Development, auditing, and testing of security-focused applications.
  * Fixing broken things that someone messed up.
 
-I speak a number of programming and shell scripting languages, including but not limited to Java, Scala, C, C++, Python, Ruby, Perl, JavaScript (including ES2015), standard shell, and Bash. I'm working on learning [Rust](https://rust-lang.org), though time has been pretty tight as of late.
+I speak a number of programming and shell scripting languages, including but not limited to Java, Scala, C, C++, Python, Ruby, Perl, JavaScript (including ES2015), standard shell, and Bash. I'm working on learning [Rust](https://www.rust-lang.org/), though time has been pretty tight as of late.
 
 ### Contact me
 
