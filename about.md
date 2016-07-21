@@ -4,7 +4,7 @@ title: About
 permalink: /about/
 ---
 
-Your average urban mystic, pining for conifers in a jungle of concrete and steel.
+An urban mystic, pining for conifers in a jungle of concrete and steel.
 
 ### Contracting and Consulting
 
