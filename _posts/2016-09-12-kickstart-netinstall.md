@@ -26,6 +26,7 @@ actually works.
 
 **packer-centos7.json**:
 
+{% raw %}
 ```
 {
     "variables": {
@@ -71,6 +72,7 @@ actually works.
     ]
 }
 ```
+{% endraw %}
 
 To summarize, we create a set of variables for configuring some things dependent on your host operating system. For
 instance, the `gui_scale_factor` is a huge help on high DPI displays, and it can be set to `2` by adding it to the
@@ -135,6 +137,7 @@ Finally, the Kickstart:
 
 **srv/kickstart.ks**:
 
+{% raw %}
 ```
 # text installer
 text
@@ -207,6 +210,7 @@ rpm -ivh https://yum.puppetlabs.com/puppetlabs-release-pc1-el-7.noarch.rpm
 yum install -y puppet-agent
 %end
 ```
+{% endraw %}
 
 I'm not going to walk line-by-line through this Kickstart file, as [the docs do a pretty good job][kickstart-syntax]
 of explaining everything.
