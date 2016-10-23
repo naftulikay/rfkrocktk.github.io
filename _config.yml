@@ -65,6 +65,7 @@ sass:
 # Use the following plug-ins
 gems:
   - jekyll-sitemap # Create a sitemap using the official Jekyll sitemap gem
+  - jekyll-redirect-from
 
 # Jekyll 3 now only supports Kramdown for Markdown
 kramdown:
